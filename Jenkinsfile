@@ -4,19 +4,11 @@ pipeline {
    
 
     
-    agent {
-    label 'your_agent_label'
-}
-tools {
-    jdk 'jdk-17'
-}
-
-    agent {
-    label 'your_agent_label'
-}
-tools {
-    nodejs 'node16'
-}
+ tools{
+        jdk 'jdk17'
+        nodejs 'node16'
+        
+    }
 
 
     
@@ -27,7 +19,7 @@ tools {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/jaiswaladi246/fullstack-bank.git'
+                git branch: 'main', url: 'https://github.com/Pratik-Pardeshi/devops-bank-appn-java.git/'
             }
         }
         
